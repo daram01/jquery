@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script>
+        // $(document).ready(function(){
+        // });
+        // 또는 (위가 정석임)
+        // $(function(){
+        // });
+
+
+        $(function(){
+            // $("#txt").css("color", "red"); // id선택자
+            // $(".tit").css("color", "blue"); // class선택자
+            // $("h2").css("color", "pink"); // 요소선택자
+            // $("h1, h2").css("font-size", "50px"); //그룹선택자
+            // $("h3.tit").css("border", "1px solid black"); //종속선택자
+            // $("h1").next().css("color", "green"); // h1태그의 동생인 h2(요소선택자)에게 css 효과
+            // $("h1").parent().css("border", "3px solid pink"); // h1태그의 부모인 div에게 css 효과
+            // $("#inner_wrap h1").css("color", "blue"); // inner_wrap 자식인 h1에게 css 효과
+            // $("#inner_wrap p").css("color", "red"); // inner_wrap 자식인 p들에게 css 효과
+            // $("h1").prev().css("color", "green"); // h1의 바로 위의 형인 p태그에게 css 효과
+            // $("h1").prev().css({"color":"red", "font-size":"40px"}); // 여러개의 효과를 주고 싶을 때는 {} 필수.
+            // $("h1").prevAll().css({"color":"yellow", "font-size":"40px"}); // h1의 형들인 p태그들에게 효과
+            // $("h1").nextAll().css({"color":"pink", "font-size":"40px"}); // h1의 동생들인 h2, h3태그들에게 효과
+            // $("h1").siblings().css("background-color", "pink"); // h1의 모든 형제들에게 효과
+        });
+    </script>
+</head>
+<body>
+
+    <div id="inner_wrap">
+        <p id="txt">JQuery Start</p>
+        <p class="tit">Class selector</p>
+        <h1>그룹 선택자</h1>
+        <h2>요소 선택자</h2>
+        <h3 class="tit">종속 선택자</h3>
+    </div>
+
+    <!-- <script>
+        $("#txt").css("color", "red");
+    </script> -->
+</body>
+</html>
