@@ -29,18 +29,49 @@
             // $("h1").prevAll().css({"color":"yellow", "font-size":"40px"}); // h1의 형들인 p태그들에게 효과
             // $("h1").nextAll().css({"color":"pink", "font-size":"40px"}); // h1의 동생들인 h2, h3태그들에게 효과
             // $("h1").siblings().css("background-color", "pink"); // h1의 모든 형제들에게 효과
+
+
+
+            // $(".txt1").parents().css("border", "1px solid red"); // txt1을 기준으로 부모들이기 때문에 div, section, h1 에게 효과.
+            // $(".txt1").parents("div").css("border", "1px solid red"); // txt1을 기준으로 부모들 중, div에게만 효과
+            $(".txt1").closest("div").css("border", "1px solid red"); // txt1의 부모들 중 가장 가까운 div에게 효과
+
+
         });
+
+
     </script>
 </head>
 <body>
 
-    <div id="inner_wrap">
+    <!-- <div id="inner_wrap">
         <p id="txt">JQuery Start</p>
         <p class="tit">Class selector</p>
         <h1>그룹 선택자</h1>
         <h2>요소 선택자</h2>
         <h3 class="tit">종속 선택자</h3>
-    </div>
+    </div> -->
+
+
+    <h1>선택자</h1>
+    <section>
+        <div>
+            <div>
+                <p class="txt1">내용</p>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div>
+            <p class="txt2">내용</p>
+        </div>
+    </section>
+
+
+
+
+
+
 
     <!-- <script>
         $("#txt").css("color", "red");

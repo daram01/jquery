@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script>
+        $(function(){
+            $("#inner_1").find(".txt1").css({"background-color":"#ff0"})
+        });
+        // p.213 마저 정리하기.
+    </script>
+</head>
+<body>
+    <div id="outer_wrap">
+        <h1>콘텐츠 탐색 선택자</h1>
+        <section id="inner_1">
+            <h2>find(),filter()</h2>
+            <p class="txt1">내용1</p>
+            <p class="txt2">내용2</p>
+        </section>
+        <section id="inner_2">
+            <h2>filter(function)</h2>
+            <p>index 0</p>
+            <p>index 1</p>
+            <p>index 2</p>
+            <p>index 3</p>
+        </section>
+    </div>
+</body>
+</html>
