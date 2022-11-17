@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <title>Document</title>
+    <script>
+        $(function(){
+            $(".btn2").hide();
+            $(".btn1").on("click", function(){
+                $(".box").slideUp(1000, "linear", function(){
+                    $(".btn1").hide(); // 1번 버튼은 숨기고
+                    $(".btn2").show(); // 2번 버튼이 보여지게 한다.
+                });
+
+            });
+        });
+    </script>
+    <style>
+        .content{
+            width: 400px;
+            background-color: #eee;
+        }
+    </style>
+</head>
+<body>
+    <p>
+        <button class="btn1">slideUp</button>
+        <button class="btn2">fadeln</button>
+    </p>
+    <p>
+        <button class="btn3">toggleSlide</button>
+    </p>
+    <p>
+        <button class="btn4">fadeTo(0.3)</button>
+        <button class="btn5">fadeTo(1)</button>
+    </p>
+    <div class="box">
+        <div class="content">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ... 
+            ... 
+        </div>
+    </div>
+</body>
+</html>

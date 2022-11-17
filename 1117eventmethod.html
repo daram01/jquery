@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script>
+        $(function(){
+            // // 단독이벤트
+            // $(".btn1").click(function(){
+            //     $(".btn1").parent().next().css("color", "red"); // class가 버튼1인 부모의 다음형제에게 css 효과
+            // });
+
+            // // 그룹이벤트
+            // $(".btn2").on({
+            //     "mouseover focus" : function(){
+            //         $(".btn2").parent().next().css("color", "green");
+            //     }
+            // });
+
+
+            // // 클릭이벤트를 삭제하는 방법 .off
+            // $(".btn1").off("click");
+            // $(".btn2").off("mouseover focus");
+
+
+
+            // <a>태그에 이벤트를 등록하기위해 링크이동되는 걸 차단하는 두가지 방법
+            // a, form 태그의 클릭 이벤트를 
+            // $(".btn1").on("click", function(e){
+            //     e.preventDefault();
+            //     $(".txt1").css("color", "red");
+            // });
+
+            // $(".btn2").on("click", function(){
+            //     $(".txt2").css("color", "green");
+            //     return false;
+            // });
+
+
+            // $(".btn3").on("dblclick", function(){
+            //     $(".txt3").css("color", "pink");
+            // });
+
+
+            // // mouseover / mouseout => 두개를 합쳐놓은 것이 hover이다.
+            // $(".btn1").on({
+            //     "mouseover" : function(){
+            //         $(".txt1").css("color", "orange"); // 마우스를 갖다대면 오렌지색으로 변하고,
+            //     },
+            //     "mouseout" : function(){
+            //         $(".txt1").css("color", "black"); // 마우스를 떼면 원래 형태의 색으로 변경
+            //     }
+            // });
+
+            // $(".btn2").hover(
+            //     function(){
+            //         $(".txt2").css("color", "pink");
+            //     },
+            //     function(){
+            //         $(".txt2").css("color", "black");
+            //     }
+            // );
+
+            // // mouseenter / mouseleave 
+            // $(".btn1").on({
+            //     "mouseenter" : function(){
+            //         $(".txt1").css("color", "orange");
+            //     },
+            //     "mouseleave" : function(){
+            //         $(".txt1").css("color", "black");
+            //     }
+            // });
+
+
+
+            // $(document).on("mousemove", function(e){
+            //     $(".posX").text(e.pageX);
+            //     $(".posY").text(e.pageY);
+            // });
+
+
+            // 스크롤 이벤트 메서드.
+            // $(window).on("scroll", function(){
+            //     let sc_top = $(this).scrollTop(); // let sc_top = $(window).scrollTop(); 으로도 가능
+            //     let sc_left = $(this).scrollLeft(); // let sc_left = $(window).scrollLift(); 으로도 가능
+
+            //     $(".top").text(sc_top);
+            //     $(".left").text(sc_left);
+
+            //     if(sc_top <= 200){
+            //         $("body").css("background-color", "red");
+            //     }else if (sc_top <= 500){
+            //         $("body").css("background-color", "yellow");
+            //     }else if (sc_top <= 1000){
+            //         $("body").css("background-color", "pink");
+            //     }
+            // });
+
+
+
+            // 포커스 이벤트
+            // $("#user_id_1").on("focus", function(){
+            //     $(this).css({"background-color" : "pink"});
+            // });
+
+            // $("#user_id_1").on("blur", function(){
+            //     $(this).css({"background-color" : "orange"});
+            // });
+
+
+            //change() 이벤트 : blur() 이벤트가 발생하는 순간 체인지이벤트가 발생한다.
+            $("#rel_site").on("change", function(){
+                $(".txt").text($(this).val());
+            });
+
+            // $("#id").on("change", function(){
+            //     $(".txt").text($(this).val());
+            // });
+
+            // <input type="text" name="id" id="id"><br>
+            // <select id="rel_site">
+            //     <option value="">사이트 선택</option>
+            //     <option value="www.google.com ">구글</option>
+            //     <option value="www.naver.com">네이버</option>
+            //     <option value="www.daum.net">다음</option>
+            // </select>
+            // <p class="txt"></p>
+
+
+            // // key 이벤트 메서드
+            // let words =["돈", "부자", "천재"]
+            // $("#id").on("keydown", function(){
+            //     let term = $(this).val();
+            //     $(".txt").text(term);
+
+            //     for(let i=0; i<3; i++){
+            //         if(term == words[i]){
+            //             $(".txt").text("사용이 불가한 단어입니다.");
+            //         }
+            //     }
+            // });
+
+            
+
+
+            // on() => off()
+            // bind() => unbind()
+
+
+
+        });
+
+    </script>
+
+    <!-- <style>
+        body{
+            width: 10000px;
+            height: 5000px;
+        }
+
+        #wrap{
+            position: fixed;
+            left: 10px;
+            top: 10px;
+        }
+    </style> -->
+</head>
+<body>
+    <!-- <p>
+        <button class="btn1">버튼1</button>
+    </p>
+    <p>내용1</p>
+    <p>
+        <button class="btn2">버튼2</button>
+    </p>
+    <p>내용2</p> -->
+
+
+
+    <!-- <p>
+        <a href="http://www.naver.com" class="btn1">버튼1</a>
+    </p>
+    <p class="txt1">내용1</p>
+    <p><a href="http://www.naver.com" class="btn2">버튼2</a></p>
+    <p class="txt2">내용2</p>
+    <p><button class="btn3">버튼3</button></p>
+    <p class="txt3">내용3</p> -->
+
+
+
+    <!-- <p>
+        <button class="btn1">Mouse Over/Mouse Out</button>
+    </p>
+    <p class="txt1">내용1</p>
+    <p>
+        <button class="btn2">Hover</button>
+    </p>
+    <p class="txt2">내용2</p> -->
+
+
+    <!-- <h1>mousemove</h1>
+    <p>X : <span class="posX">0</span></p>
+    <p>Y : <span class="posY">0</span></p> -->
+
+
+
+    <!-- <div id="wrap">
+        <p>scrollTop:<span class="top">0</span>px</p>
+        <p>scrollLeft:<span class="left">0</span>px</p>
+    </div> -->
+    
+
+
+
+    <!-- <form action="#">
+        <p>
+            <label for="user_id_1">ID</label>
+            <input type="text" name="user_id_1" id="user_id_1">
+        </p>
+    </form> -->
+
+
+
+    <!-- <input type="text" name="id" id="id"><br> -->
+    <select id="rel_site">
+        <option value="">사이트 선택</option>
+        <option value="www.google.com ">구글</option>
+        <option value="www.naver.com">네이버</option>
+        <option value="www.daum.net">다음</option>
+    </select>
+    <p class="txt"></p>
+
+
+    <h1>금지어 필터링</h1>
+    <label>댓글 : </label>
+    <input type="text" name="id" id="id">
+    <p class="txt"></p>
+
+
+
+
+</body>
+</html>
