@@ -8,25 +8,62 @@
     <title>Document</title>
     <script>
         $(function(){
-            $(".btn2").hide();
-            $(".btn1").on("click", function(){
-                $(".box").slideUp(1000, "linear", function(){
-                    $(".btn1").hide(); // 1번 버튼은 숨기고
-                    $(".btn2").show(); // 2번 버튼이 보여지게 한다.
-                });
+            // $(".btn2").hide();
+            // $(".btn1").on("click", function(){
+            //     $(".box").slideUp(1000, "linear", function(){
+            //         $(".btn1").hide(); // 1번 버튼은 숨기고
+            //         $(".btn2").show(); // 2번 버튼이 보여지게 한다.
+            //     });
+            // });
 
+            // $(".btn2").on("click", function(){
+            //     $(".box").fadeIn(1000, "swing", function(){
+            //         $(".btn1").show();
+            //         $(".btn2").hide();
+            //     });
+            // });
+
+            // $(".btn3").on("click", function(){
+            //     $(".box").slideToggle(1000,"linear");
+            // });
+
+            $(".btn1").on("click", function(){
+                $(".txt1").animate({
+                    marginLeft:"500px",
+                    fontSize:"30px"
+                },
+                3000, "linear", function(){
+                    alert("모션 완료!");
+                });
             });
+
+
+            $(".btn2").on("click", function(){
+                $(".txt2").animate({
+                    marginLeft:"+=50px",
+                }, 1000);
+            });
+
+
+
         });
     </script>
     <style>
-        .content{
+        /* .content{
             width: 400px;
             background-color: #eee;
+        } */
+
+        .txt1{
+            background-color: aqua;
+        }
+        .txt2{
+            background-color: pink;
         }
     </style>
 </head>
 <body>
-    <p>
+    <!-- <p>
         <button class="btn1">slideUp</button>
         <button class="btn2">fadeln</button>
     </p>
@@ -42,6 +79,13 @@
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ... 
             ... 
         </div>
-    </div>
+    </div> -->
+
+
+
+    <p><button class="btn1">버튼1</button></p>
+    <span class="txt1">"500px" 이동</span>
+    <p><button class="btn2">버튼2</button></p>
+    <span class="txt2">"50px"씩 이동</span>
 </body>
 </html>
